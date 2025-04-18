@@ -1,0 +1,29 @@
+class Solution {
+    public boolean isPalindrome(String s) {
+
+// Remove non-alphanumeric characters and convert to lowercase
+        s = s.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
+
+        //get the left and right pointers
+    int left = 0;
+    int right = s.length()-1;
+
+//start a loop and compare character
+    while(left<right){
+        // if same move bot pointers
+        if(s.charAt(left)== s.charAt(right)){
+            left++;
+            right--;
+
+        }
+        //if not simply return false
+        else{
+            return false;
+        }
+        
+    }
+    // if we come out of the loop, then all
+    //characters have matched, return true
+        return true;
+    }
+}
